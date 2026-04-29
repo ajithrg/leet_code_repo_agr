@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/com/te/practice/GeneralPractice.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/com/te/practice/GeneralPractice.java" />
+              <option name="originalContent" value="package practice;&#10;&#10;import java.util.*;&#10;import java.util.function.Predicate;&#10;import java.util.stream.Collectors;&#10;&#10;record Employee(int id, String name, String dept, double salary) {&#10;&#10;}&#10;&#10;public class GeneralPractice {&#10;    public static void main(String[] args) {&#10;&#10;        List&lt;Employee&gt; l = Arrays.asList(&#10;                new Employee(10, &quot;Sukesh&quot;, &quot;IT&quot;, 28247.00),&#10;                new Employee(207, &quot;Rohit&quot;, &quot;HR&quot;, 38267.00),&#10;                new Employee(24, &quot;Vijay&quot;, &quot;SALES&quot;, 45345.00),&#10;                new Employee(34, &quot;Naresh&quot;, &quot;IT&quot;, 12000.00),&#10;                new Employee(56, &quot;Suresh&quot;, &quot;HR&quot;, 102356.00),&#10;                new Employee(51, &quot;Ajith&quot;, &quot;SALES&quot;, 43450.00)&#10;&#10;        );&#10;&#10;        double salary = l.stream()&#10;                .distinct()&#10;                .collect(Collectors.groupingBy())&#10;&#10;    }&#10;&#10;}&#10;" />
+              <option name="updatedContent" value="package practice;&#10;&#10;import java.util.*;&#10;&#10;record Employee(int id, String name, String dept, double salary) {&#10;&#10;}&#10;&#10;public class GeneralPractice {&#10;    public static void main(String[] args) {&#10;&#10;        List&lt;Employee&gt; l = Arrays.asList(&#10;                new Employee(10, &quot;Sukesh&quot;, &quot;IT&quot;, 28247.00),&#10;                new Employee(207, &quot;Rohit&quot;, &quot;HR&quot;, 38267.00),&#10;                new Employee(24, &quot;Vijay&quot;, &quot;SALES&quot;, 45345.00),&#10;                new Employee(34, &quot;Naresh&quot;, &quot;IT&quot;, 12000.00),&#10;                new Employee(56, &quot;Suresh&quot;, &quot;HR&quot;, 102356.00),&#10;                new Employee(51, &quot;Ajith&quot;, &quot;SALES&quot;, 43450.00)&#10;&#10;        );&#10;&#10;        // Method 1: Get the highest salary value&#10;        double highestSalary = l.stream()&#10;                .mapToDouble(Employee::salary)&#10;                .max()&#10;                .orElse(0.0);&#10;        System.out.println(&quot;Highest Salary: &quot; + highestSalary);&#10;&#10;        // Method 2: Get the employee with highest salary&#10;        Employee employeeWithHighestSalary = l.stream()&#10;                .max(Comparator.comparingDouble(Employee::salary))&#10;                .orElse(null);&#10;        System.out.println(&quot;Employee with Highest Salary: &quot; + employeeWithHighestSalary);&#10;&#10;    }&#10;&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
